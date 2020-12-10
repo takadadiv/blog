@@ -21,7 +21,10 @@ export const actions = {
 }
 
 export const getters = {
-  getByTagId: state => tagId => {
-    return state.entries.filter(entry => entry.tags.filter(tag => tag.sys.id === tagId))
+  getById: state => id => {
+    return state.entries.find(entry => entry.sys.id === id)
   }
+  // getByTagId: state => tagId => {
+  //   return state.entries.filter(entry => entry.tags.filter(tag => tag.sys.id === tagId))
+  // }
 }
