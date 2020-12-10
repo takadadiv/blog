@@ -5,7 +5,11 @@
     .title
       n-link(:to="{ name: 'articles-id', params: { id: article.sys.id } }") {{ article.fields.title }}
     .tag
-      span(v-for="tag in article.fields.tags" :key="tag.sys.id") {{ tag.fields.name }}
+      n-link(
+        v-for="tag in article.fields.tags"
+        :key="tag.sys.id"
+        :to="{ name: 'tags-id', params: { id: tag.sys.id } }"
+      ) {{ tag.fields.name }}
     hr
 </template>
 
