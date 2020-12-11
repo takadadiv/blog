@@ -10,7 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/markdownit": "^1.2.10",
     "bulma": "^0.9.1",
     "contentful": "^8.1.1",

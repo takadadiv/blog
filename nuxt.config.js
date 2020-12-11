@@ -29,24 +29,21 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    ['@nuxtjs/dotenv', { /* module options */ }]
+    '@nuxtjs/dotenv'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    // https://www.npmjs.com/package/@nuxtjs/markdownit
     '@nuxtjs/markdownit'
   ],
 
+  // markdownit options (https://markdown-it.github.io/markdown-it/)
   markdownit: {
     injected: true,
     breaks: true,
     html: true
   },
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
