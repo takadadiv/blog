@@ -6,7 +6,7 @@
       h1 {{ article.fields.title }}
     .tag
       span(v-for="tag in article.fields.tags" :key="tag.sys.id") {{ tag.fields.name }}
-    .body {{ article.fields.body }}
+    .body(v-html="$md.render(article.fields.body)")
 </template>
 
 <script>
