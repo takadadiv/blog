@@ -4,8 +4,8 @@
       time {{ article.sys.createdAt }}
     .title
       h1 {{ article.fields.title }}
-    .tag
-      span(v-for="tag in article.fields.tags" :key="tag.sys.id") {{ tag.fields.name }}
+    .tags
+      span.tag.is-dark(v-for="tag in article.fields.tags" :key="tag.sys.id") {{ tag.fields.name }}
     .body(v-html="$md.render(article.fields.body)")
 </template>
 
@@ -28,5 +28,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+.time
+  margin-bottom 0.5rem
+.title
+  margin-bottom 1rem
+  letter-spacing 0.1rem
 </style>
