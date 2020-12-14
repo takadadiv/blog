@@ -13,14 +13,13 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/vs2015.min.css' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~/assets/css/bulma.sass'
+    '~/assets/css/site.sass'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -44,19 +43,17 @@ export default {
   // markdownit options (https://markdown-it.github.io/markdown-it/)
   markdownit: {
     injected: true,
+    linkify: true,
     breaks: true,
     html: true,
-    highlight: function (str, lang) {
-      var hljs = require('highlight.js');
+    highlight: (str, lang) => {
+      const hljs = require('highlight.js')
       if (lang && hljs.getLanguage(lang)) {
         try {
-          return '<pre class="hljs"><code>' +
-                 hljs.highlight(lang, str, true).value +
-                 '</code></pre>';
-        } catch (__) {}
+          return `<pre class="hljs"><code>${hljs.highlight(lang, str, true).value}</code></pre>`
+        } catch (e) {}
       }
-  
-      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+      return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
     }
   },
 
