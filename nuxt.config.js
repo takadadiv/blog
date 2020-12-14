@@ -1,4 +1,6 @@
-export default {
+import * as config from './config'
+
+export default Object.assign({
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -40,24 +42,7 @@ export default {
     '@nuxtjs/markdownit'
   ],
 
-  // markdownit options (https://markdown-it.github.io/markdown-it/)
-  markdownit: {
-    injected: true,
-    linkify: true,
-    breaks: true,
-    html: true,
-    highlight: (str, lang) => {
-      const hljs = require('highlight.js')
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return `<pre class="hljs"><code>${hljs.highlight(lang, str, true).value}</code></pre>`
-        } catch (e) {}
-      }
-      return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`
-    }
-  },
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
-}
+}, config)
