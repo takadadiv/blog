@@ -33,4 +33,17 @@ export default {
 .title
   margin-bottom 1rem
   letter-spacing 0.1rem
+.body
+  >>> pre
+    background inherit
+    font-family inherit
+    margin 1rem 0
+    padding 0
+    .code-name
+      font-size 1rem
+      display block
+      margin-bottom 0.3rem
+    code
+      border-left 3px solid #333
+      padding 1rem
 </style>
