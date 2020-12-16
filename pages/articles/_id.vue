@@ -1,7 +1,7 @@
 <template lang="pug">
   article
     .time
-      time {{ article.sys.createdAt }}
+      time {{ $formatDate(article.sys.createdAt) }}
     .title
       h1 {{ article.fields.title }}
     .tags

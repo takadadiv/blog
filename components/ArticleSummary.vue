@@ -1,7 +1,7 @@
 <template lang="pug">
   .summary
     .time
-      time {{ article.sys.createdAt }}
+      time {{ $formatDate(article.sys.createdAt) }}
     .title
       n-link(:to="{ name: 'articles-id', params: { id: article.sys.id } }") {{ article.fields.title }}
     .tags
