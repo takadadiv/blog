@@ -1,5 +1,3 @@
-import client from '~/plugins/contentful'
-
 export const state = () => ({
   entries: []
 })
@@ -12,7 +10,7 @@ export const mutations = {
 
 export const actions = {
   async getAll({ commit }) {
-    const res = await client.getEntries({
+    const res = await this.$contentful.getEntries({
       content_type: 'article'
     })
 

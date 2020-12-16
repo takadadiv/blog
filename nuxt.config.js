@@ -26,7 +26,8 @@ export default Object.assign({
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/util.js'
+    '~/plugins/util.js',
+    '~/plugins/contentful.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
