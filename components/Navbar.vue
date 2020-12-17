@@ -16,3 +16,11 @@
         n-link.navbar-item(:to="{ name: 'index' }") メモ帳
         n-link.navbar-item(:to="{ name: 'portfolio' }") ポートフォリオ
 </template>
+
+<style lang="stylus" scoped>
+.navbar-item
+  &:focus
+  &:focus-within
+  &:hover
+    background inherit
+</style>

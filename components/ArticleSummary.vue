@@ -23,13 +23,15 @@ export default {
 <style lang="stylus" scoped>
 .summary
   margin-bottom 2rem
-.time
-  margin-bottom 0.25rem
-.title
-  font-size 1.5rem
-  letter-spacing 0.1rem
-  margin-bottom 0.5rem
-  font-weight normal
-.tags
-  margin 0
+  .time
+    margin-bottom 0.25rem
+  .title
+    font-size 1.4rem
+    letter-spacing 0.1rem
+    margin-bottom 0.5rem
+    font-weight normal
+    a:visited
+      color #777
+  .tags
+    margin 0
 </style>

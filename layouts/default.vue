@@ -2,6 +2,7 @@
   .container
     Navbar
     Nuxt
+    Footer
 </template>
 
 <style lang="stylus" scoped>

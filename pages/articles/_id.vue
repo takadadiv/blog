@@ -35,8 +35,10 @@ export default {
 .time
   margin-bottom 0.5rem
 .title
-  margin-bottom 1rem
+  margin-bottom 0.8rem
   letter-spacing 0.1rem
+.tags
+  margin-bottom 2.5rem
 .body
   >>> pre
     background inherit
