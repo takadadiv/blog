@@ -5,11 +5,11 @@
     .title
       n-link(:to="{ name: 'articles-id', params: { id: article.sys.id } }") {{ article.fields.title }}
     .tags
-      n-link.tag.is-dark(
+      Tag(
         v-for="tag in article.fields.tags"
         :key="tag.sys.id"
-        :to="{ name: 'tags-id', params: { id: tag.sys.id } }"
-      ) {{ tag.fields.name }}
+        :tag="tag"
+      )
 </template>
 
 <script>

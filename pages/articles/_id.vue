@@ -5,7 +5,11 @@
     .title
       h1 {{ article.fields.title }}
     .tags
-      span.tag.is-dark(v-for="tag in article.fields.tags" :key="tag.sys.id") {{ tag.fields.name }}
+      Tag(
+        v-for="tag in article.fields.tags"
+        :key="tag.sys.id"
+        :tag="tag"
+      )
     .body(v-html="$md.render(article.fields.body)")
 </template>
 
